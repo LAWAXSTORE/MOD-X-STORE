@@ -1,110 +1,81 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MOD X STORE</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#080b09;color:white;font-family:Arial}
-header{background:#101812;padding:22px;text-align:center;border-bottom:2px solid #00ff66}
-h1{color:#00ff66;margin:0;font-size:30px}
-nav{display:flex;justify-content:center;gap:22px;padding:16px;background:#111a14;position:sticky;top:0}
-nav a{color:#00ff66;text-decoration:none;font-weight:bold}
-main{padding:20px 12px;max-width:900px;margin:auto}
-.hero{text-align:center;padding:35px 10px}
-.hero h2{font-size:27px;color:#00ff66}
-.search{width:100%;padding:14px;border-radius:9px;border:1px solid #00ff66;background:#101812;color:white}
-h2{color:#00ff66}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-.card{background:#121a15;border:1px solid #176b37;border-radius:12px;padding:20px;text-align:center}
-.card h3{color:#00ff66}
-button{background:#00ff66;color:#071009;border:0;border-radius:7px;padding:12px 20px;font-weight:bold;cursor:pointer}
-section{margin:35px 0}
-.vip{border:2px solid #00ff66}
-footer{text-align:center;color:#999;padding:25px;border-top:1px solid #176b37}
+body{margin:0;background:#080d0b;color:white;font-family:Arial,sans-serif}
+header{padding:22px;text-align:center;background:#101b15;border-bottom:1px solid #20e878}
+h1{color:#20e878;margin:0}
+nav{display:flex;justify-content:center;gap:20px;padding:15px}
+nav a{color:#20e878;text-decoration:none}
+main{max-width:850px;margin:auto;padding:15px}
+input{width:100%;padding:14px;border-radius:10px;border:1px solid #20e878;background:#111;color:white}
+h2{color:#20e878}
+.game{display:flex;align-items:center;gap:15px;background:#142019;padding:15px;margin:14px 0;border-radius:14px}
+.game img{width:75px;height:75px;border-radius:14px}
+.game h3{margin:0 0 8px}
+.game p{color:#aaa;font-size:13px}
+button{background:#20e878;color:#061008;border:0;padding:10px 17px;border-radius:8px;font-weight:bold}
+footer{text-align:center;color:#888;padding:30px}
 </style>
 </head>
 <body>
-
 <header>
 <h1>MOD X STORE</h1>
-<p>GAMES • APPS • COMMUNITY</p>
+<p>Games • Apps • Downloads</p>
 </header>
-
 <nav>
 <a href="#games">Games</a>
 <a href="#apps">Apps</a>
 <a href="#vip">VIP</a>
 </nav>
-
 <main>
-<div class="hero">
-<h2>WELCOME TO MOD X STORE</h2>
-<p>Your gaming world starts here.</p>
-<input class="search" id="search" placeholder="Search games and apps..." oninput="searchItems()">
-</div>
-
-<section id="games">
-<h2>🎮 GAMES</h2>
-<div class="grid">
-<div class="card">
+<input id="search" placeholder="Search games..." oninput="searchGames()">
+<h2 id="games">🎮 Games</h2>
+<div id="gameList">
+<div class="game">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/">
+<div>
 <h3>PUBG MOBILE</h3>
-<p>Battle Royale</p>
-<a href="https://apps.apple.com/iq/app/pubg-mobile/id1330123889">
-<button>DOWNLOAD</button>
-</a>
-</div>
-<div class="card">
-<h3>MINECRAFT</h3>
-<p>Build your world</p>
-<button onclick="alert('Official link coming soon')">VIEW</button>
-</div>
-<div class="card">
-<h3>CALL OF DUTY MOBILE</h3>
-<p>Action and Battle</p>
-<button onclick="alert('Official link coming soon')">VIEW</button>
+<p>Battle Royale • iPhone</p>
+<a href="https://apps.apple.com/iq/app/pubg-mobile/id1330123889"><button>DOWNLOAD</button></a>
 </div>
 </div>
-</section>
-
-<section id="apps">
-<h2>📱 APPLICATIONS</h2>
-<div class="grid">
-<div class="card">
-<h3>APPS STORE</h3>
-<p>More applications coming soon</p>
-<button onclick="alert('Coming soon')">VIEW APPS</button>
+<div class="game">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/">
+<div>
+<h3>Minecraft</h3>
+<p>Adventure • iPhone</p>
+<a href="https://apps.apple.com/app/minecraft/id479516143"><button>DOWNLOAD</button></a>
 </div>
 </div>
-</section>
-
-<section id="vip">
-<h2>👑 VIP MEMBERSHIP</h2>
-<div class="card vip">
-<h3>MOD X VIP</h3>
-<p>25,000 IQD / 365 DAYS</p>
-<p>VIP access and exclusive content</p>
-<button onclick="alert('Contact admin to activate VIP')">JOIN VIP</button>
+<div class="game">
+<div>
+<h3>Call of Duty Mobile</h3>
+<p>Action • iPhone</p>
+<a href="https://apps.apple.com/app/call-of-duty-mobile/id1287282214"><button>DOWNLOAD</button></a>
 </div>
-</section>
-
+</div>
+</div>
+<h2 id="apps">📱 Apps</h2>
+<p>More apps coming soon...</p>
+<h2 id="vip">⭐ VIP</h2>
+<p>VIP Membership — 25,000 IQD / 365 Days</p>
+<p>Contact Admin for activation.</p>
 </main>
-
-<footer>
-<p>© 2026 MOD X STORE</p>
-<p>Powered by Lawa Cyber</p>
-</footer>
-
+<footer>Powered by Lawa Cyber • MOD X STORE</footer>
 <script>
-function searchItems(){
-let value=document.getElementById("search").value.toLowerCase();
-document.querySelectorAll(".card").forEach(card=>{
-card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
+function searchGames(){
+let q=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.game').forEach(g=>{
+g.style.display=g.innerText.toLowerCase().includes(q)?'flex':'none';
 });
 }
 </script>
 </body>
 </html>
-
