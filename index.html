@@ -1,3 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOD X STORE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080b09;color:white;font-family:Arial}
+header{background:#101812;padding:22px;text-align:center;border-bottom:2px solid #00ff66}
+h1{color:#00ff66;margin:0;font-size:30px}
+nav{display:flex;justify-content:center;gap:22px;padding:16px;background:#111a14;position:sticky;top:0}
+nav a{color:#00ff66;text-decoration:none;font-weight:bold}
+main{padding:20px 12px;max-width:900px;margin:auto}
+.hero{text-align:center;padding:35px 10px}
+.hero h2{font-size:27px;color:#00ff66}
+.search{width:100%;padding:14px;border-radius:9px;border:1px solid #00ff66;background:#101812;color:white}
+h2{color:#00ff66}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:#121a15;border:1px solid #176b37;border-radius:12px;padding:20px;text-align:center}
+.card h3{color:#00ff66}
+button{background:#00ff66;color:#071009;border:0;border-radius:7px;padding:12px 20px;font-weight:bold;cursor:pointer}
+section{margin:35px 0}
+.vip{border:2px solid #00ff66}
+footer{text-align:center;color:#999;padding:25px;border-top:1px solid #176b37}
+</style>
+</head>
+<body>
+
+<header>
+<h1>MOD X STORE</h1>
+<p>GAMES • APPS • COMMUNITY</p>
+</header>
+
+<nav>
+<a href="#games">Games</a>
+<a href="#apps">Apps</a>
+<a href="#vip">VIP</a>
+</nav>
+
+<main>
+<div class="hero">
+<h2>WELCOME TO MOD X STORE</h2>
+<p>Your gaming world starts here.</p>
+<input class="search" id="search" placeholder="Search games and apps..." oninput="searchItems()">
+</div>
+
+<section id="games">
+<h2>🎮 GAMES</h2>
+<div class="grid">
+<div class="card">
+<h3>PUBG MOBILE</h3>
+<p>Battle Royale</p>
 <a href="https://apps.apple.com/iq/app/pubg-mobile/id1330123889">
-<button>DOWNLOAD PUBG</button>
+<button>DOWNLOAD</button>
 </a>
+</div>
+<div class="card">
+<h3>MINECRAFT</h3>
+<p>Build your world</p>
+<button onclick="alert('Official link coming soon')">VIEW</button>
+</div>
+<div class="card">
+<h3>CALL OF DUTY MOBILE</h3>
+<p>Action and Battle</p>
+<button onclick="alert('Official link coming soon')">VIEW</button>
+</div>
+</div>
+</section>
+
+<section id="apps">
+<h2>📱 APPLICATIONS</h2>
+<div class="grid">
+<div class="card">
+<h3>APPS STORE</h3>
+<p>More applications coming soon</p>
+<button onclick="alert('Coming soon')">VIEW APPS</button>
+</div>
+</div>
+</section>
+
+<section id="vip">
+<h2>👑 VIP MEMBERSHIP</h2>
+<div class="card vip">
+<h3>MOD X VIP</h3>
+<p>25,000 IQD / 365 DAYS</p>
+<p>VIP access and exclusive content</p>
+<button onclick="alert('Contact admin to activate VIP')">JOIN VIP</button>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 MOD X STORE</p>
+<p>Powered by Lawa Cyber</p>
+</footer>
+
+<script>
+function searchItems(){
+let value=document.getElementById("search").value.toLowerCase();
+document.querySelectorAll(".card").forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
+});
+}
+</script>
+</body>
+</html>
+
